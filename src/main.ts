@@ -8,6 +8,7 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true, // Enabling "whitelist" feature of ValidationPipe
       forbidNonWhitelisted: true, // Throw errors when whitelisted properties are found
+      transform: true, // Auto-transform Payloads to DTO instances
     })
   );
   await app.listen(3000);
